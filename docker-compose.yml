@@ -1,0 +1,13 @@
+services:
+  backend:
+    image: "buschamp/buschamp-be:0.0.1"
+    container_name: bus-champ-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - trafiklab.api.key=${TRAFIKLAB_API_KEY}
+  frontend:
+    image: "buschamp/buschamp-fe:0.0.1"
+    container_name: bus-champ-frontend
+    ports:
+      - "3000:3000"
